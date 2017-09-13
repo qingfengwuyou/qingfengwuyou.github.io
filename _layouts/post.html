@@ -7,9 +7,11 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
-      </time> {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
   </header>
 
@@ -17,5 +19,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.disqus.shortname %} {% include disqus_comments.html %} {% endif %}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
 </article>
