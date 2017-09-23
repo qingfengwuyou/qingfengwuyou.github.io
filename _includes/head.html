@@ -5,9 +5,9 @@
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <link rel="stylesheet" href="/assets/libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href='{{ "/assets/main.css" | relative_url }}'>
+    <link rel="stylesheet" href='{{"/assets/main.css" | relative_url }}'>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href='{{ "/feed.xml" | relative_url }}'>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href='{{"/feed.xml" | relative_url }}'>
     <script src="/assets/libs/jquery/jquery.min.js"></script>
     <script src="/assets/libs/tether/js/tether.min.js"></script>
     <script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>
