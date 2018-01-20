@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 前端流行框架和实用库列表
+tag: [javascript, Framework, nodejs]
 ---
+
+收集前端常用流行框架及 nodejs 第三方实用库
 
 ## 后端
 
@@ -23,3 +26,22 @@ title: 前端流行框架和实用库列表
 - 支持子pagelet，无限级嵌套
 - 支持根据条件渲染模板，延时输出布局
 - bigview支持错误模块显示，仅限于布局之前
+
+### 代理工具
+
+#### hiproxy
+
+hiproxy是一个基于Node.js开发的轻量级网络代理工具，主要目的是为了解决多个开发者在开发过程中遇到的hosts管理和反向代理的问题。使得在开发时，不再需要修改系统hosts和启动一个Nginx服务。hiproxy扩展了hosts的语法，支持端口号。此外，hiproxy还支持通过类似于nginx配置文件的语法来配置代理。
+
+[https://github.com/hiproxy/hiproxy](https://github.com/hiproxy/hiproxy)
+
+* 支持Nginx风格的配置文件格式，配置简单直观
+* 支持hosts以及扩展（支持端口号）
+* 支持插件扩展rewrite指令、CLI命令和页面
+* 支持HTTPS证书自动生成
+* 支持代理自动配置（Proxy auto-config）
+* 支持后台启动，日志输出到文件
+* 支持配置文件自动查找
+* 支持打开浏览器窗口并自动配置代理
+* 提供Node.js API
+* ...
